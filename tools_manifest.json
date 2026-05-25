@@ -1,0 +1,102 @@
+{
+  "name": "seiva-support",
+  "version": "0.1.0",
+  "description": "Read-only platform support tools. All endpoints under /api/v1/platform/*. Auth: Bearer JWT issued by `mix seiva.platform_admin.token <email>`. Email must be in PLATFORM_ADMIN_EMAILS at request time.",
+  "tools": [
+    {
+      "name": "seiva_support_find_user",
+      "endpoint": "GET /users/find",
+      "params": ["email", "id"]
+    },
+    {
+      "name": "seiva_support_workspace_overview",
+      "endpoint": "GET /workspaces/:id/overview",
+      "params": ["since"]
+    },
+    {
+      "name": "seiva_support_app_overview",
+      "endpoint": "GET /apps/:id/overview",
+      "params": []
+    },
+    {
+      "name": "seiva_support_app_error_logs",
+      "endpoint": "GET /logs/app_errors",
+      "params": ["workspace_id", "app_id", "environment", "since", "limit"]
+    },
+    {
+      "name": "seiva_support_app_usage_logs",
+      "endpoint": "GET /logs/app_usage",
+      "params": ["workspace_id", "app_id", "user_id", "action", "status", "since", "limit"]
+    },
+    {
+      "name": "seiva_support_chat_logs",
+      "endpoint": "GET /logs/chat_agent",
+      "params": ["session_id", "workspace_id", "user_id", "app_id", "level", "source", "since", "limit"]
+    },
+    {
+      "name": "seiva_support_audit_logs",
+      "endpoint": "GET /logs/audit",
+      "params": ["workspace_id", "user_id", "resource_type", "resource_id", "action", "since", "limit"]
+    },
+    {
+      "name": "seiva_support_execution_logs",
+      "endpoint": "GET /logs/executions",
+      "params": ["execution_id", "level", "since", "limit"]
+    },
+    {
+      "name": "seiva_support_usage_events",
+      "endpoint": "GET /logs/usage_events",
+      "params": ["workspace_id", "partnership_id", "user_id", "app_id", "service", "event_type", "model", "since", "limit"]
+    },
+    {
+      "name": "seiva_support_fly_logs",
+      "endpoint": "GET /fly/logs",
+      "params": ["since", "region", "instance", "vm_type", "limit"]
+    },
+    {
+      "name": "seiva_support_cloudrun_services",
+      "endpoint": "GET /cloudrun/services",
+      "params": []
+    },
+    {
+      "name": "seiva_support_cloudrun_logs",
+      "endpoint": "GET /cloudrun/logs",
+      "params": ["service", "severity", "contains", "since", "limit"]
+    },
+    {
+      "name": "seiva_support_sentry_issues",
+      "endpoint": "GET /sentry/issues",
+      "params": ["query", "stats_period", "limit"]
+    },
+    {
+      "name": "seiva_support_sentry_issue_detail",
+      "endpoint": "GET /sentry/issues/:id",
+      "params": []
+    },
+    {
+      "name": "seiva_support_sentry_issue_events",
+      "endpoint": "GET /sentry/issues/:id/events",
+      "params": ["limit"]
+    },
+    {
+      "name": "seiva_support_builder_status",
+      "endpoint": "GET /runtime/builder_status",
+      "params": ["workspace_id", "app_id"]
+    },
+    {
+      "name": "seiva_support_oban_jobs",
+      "endpoint": "GET /runtime/oban_jobs",
+      "params": ["state", "queue", "limit"]
+    },
+    {
+      "name": "seiva_support_cluster_info",
+      "endpoint": "GET /runtime/cluster",
+      "params": []
+    },
+    {
+      "name": "seiva_support_audit_self",
+      "endpoint": "GET /audit",
+      "params": ["limit"]
+    }
+  ]
+}

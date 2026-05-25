@@ -1,0 +1,45 @@
+{
+  "name": "@seiva-ai/support-mcp-server",
+  "version": "0.1.0",
+  "description": "Read-only support MCP for Seiva platform admins. Aggregates DB logs, Fly.io, Cloud Run and Sentry to triage production bugs from Claude Code.",
+  "type": "module",
+  "bin": {
+    "seiva-support-mcp-server": "./index.js"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "tools_manifest.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaopedromano-source/seiva-support-mcp.git"
+  },
+  "homepage": "https://platform.seiva.ai",
+  "bugs": {
+    "url": "https://github.com/joaopedromano-source/seiva-support-mcp/issues"
+  },
+  "keywords": [
+    "seiva",
+    "mcp",
+    "model-context-protocol",
+    "support",
+    "claude-code"
+  ],
+  "license": "MIT"
+}
