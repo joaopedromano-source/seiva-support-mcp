@@ -4,7 +4,7 @@
   "description": "Read-only support MCP for Seiva platform admins. Aggregates DB logs, Fly.io, Cloud Run and Sentry to triage production bugs from Claude Code.",
   "type": "module",
   "bin": {
-    "seiva-support-mcp-server": "./index.js"
+    "seiva-support-mcp-server": "index.js"
   },
   "main": "index.js",
   "files": [
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joaopedromano-source/seiva-support-mcp.git"
+    "url": "git+https://github.com/joaopedromano-source/seiva-support-mcp.git"
   },
   "homepage": "https://platform.seiva.ai",
   "bugs": {
